@@ -1,0 +1,53 @@
+合并分支 branch 
+Git  merge 分支名
+
+
+配置git 远程仓库 ：
+ git remote add github  +地址  然后数据 git 账户 秘密 
+
+查看代码 git remote -v 查看git账户list
+
+上传代码 git push -u origin master 
+
+git pull --rebase github master    
+git pull origin master --allow-unrelated-histories
+
+
+当然我们可以在cmd命令提示符中输入以下查看配置信息
+1、git config --local -l 查看仓库配置【必须要进入到具体的目录下，比如要查看TestGit仓库的配置信息】
+￼
+2、git config --global -l 查看用户配置
+3、git config --system -l 查看系统配置
+￼
+4、git config -l查看所有的配置信息，依次是系统级别、用户级别、仓库级别
+￼
+5.git config 常用配置选项
+* git config -e 编辑配置文件 
+    * git config --local -e 编辑仓库级别配置文件
+    * git config --global -e 编辑用户级别配置文件
+    * git config --system -e 编辑系统级别配置文件
+* git config 添加配置项目 
+    * git config --global user.email “you@example.com”
+    * git config --global user.name “Your Name”
+上面的操作表示添加用户级别的配置信息，也就是说修改用户宿主目录下面的配置文件
+6. 配置文件如何生效的
+# 对于git来说，配置文件的权重是仓库>全局>系统。Git会使用这一系列的配置文件来存储你定义的偏好，它首先会查找/etc/gitconfig文件（系统级），该文件含有对系统上所有用户及他们所拥有的仓库都生效的配置值。接下来Git会查找每个用户的~/.gitconfig文件（全局级）。最后Git会查找由用户定义的各个库中Git目录下的配置文件.git/config（仓库级），该文件中的值只对当前所属仓库有效。~
+
+7.增加配置项
+参数 --add
+格式: git config [--local|--global|--system] --add section.key value(默认是添加在local配置中)
+注意add后面的section,key,value一项都不能少，否则添加失败。比如我们执行：git config –add cat.name tom
+￼
+8.获取一个配置项
+有时候，我们并不需要查看所有配置的值，而是查看某个配置项的值，怎么做呢？
+命令参数 --get
+格式：git config [--local|--global|--system] --get section.key(默认是获取local配置中内容)
+我们先往global配置中写入一个cat.name=Tomcat的配置项，再使用git config --get cat.name看看得到的是什么：
+￼
+结果就是local中的cat.name=Tom，因此git config --get section.key 等价于git config --local --get section.key
+如果获取一个section不存在的key值，不会返回任何值
+如果获取一个不存在的section的key值，则会报错
+ 9.删除一个配置项
+命令参数 –unset
+格式：git config [--local|--global|--system] --unset section.key
+相信有了前两个命令的使用基础，大家举一反三就知道改怎么用了，来，我们试试删除local配置中的cat.nam
