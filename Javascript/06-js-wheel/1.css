@@ -1,0 +1,26 @@
+:root {
+    padding: 1px;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+
+}
+
+.slider {
+    position: relative;
+}
+
+
+.item {
+    opacity: 0;
+    position: absolute;
+    display: block;
+    transition: all .5s;
+}
+
