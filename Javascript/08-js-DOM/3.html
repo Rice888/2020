@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    .button {
+        font-size: 20px;
+    }
+
+    .popup {
+        position: fixed;
+        background: #FFF;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+        border: 4px solid;
+        padding: 20px;
+        z-index: 10000;
+    }
+
+    .mask {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 9999;
+    }
+
+   
+
+    [hidden] {
+        display: none !important;
+    }
+</style>
+
+<body>
+    <button id="A">collect</button>
+    <div id="B">
+        <button data-position="leftTop">左上</button>
+        <button data-position="topCenter">上中</button>
+        <button data-position="rightTop">右上</button><br>
+        <button data-position="leftCenter">左中</button>
+        <button data-position="center">中心</button>
+        <button data-position="rightCenter">右中</button><br>
+        <button data-position="leftBottom">左下</button>
+        <button data-position="bottom">下中</button>
+        <button data-position="rightBottom">右下</button><br>
+        <button data-position="top">close</button>
+    </div>
+</body>
+
+</html>
+<script src="main2.js"></script>

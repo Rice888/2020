@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+.popup{
+    border: 2px solid;
+    padding: 10px;
+    position: fixed;
+    z-index: 10000;
+    background: #FFF;
+
+}
+.mask{
+    background: rgba(0, 0, 0, .4);
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    z-index: 999;
+    position: fixed;
+}
+</style>
+<body>
+
+    <button id="A">collect</button>
+    <div id="B">
+        <img src="http://dummyimage.com/200x200" alt="">
+        <span>Are your sure collect!</span><br>
+            账户: <input type="text"><br>
+            密码: <input type="password">
+        <button>close</button>
+    </div>
+    
+</body>
+</html>
+<script src="main3.js"></script>
