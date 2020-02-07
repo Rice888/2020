@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    :root {
+        font-family: sans-serif;
+        font-size: 20px;
+    }
+
+    table {
+        /* min-width: 380px; */
+        border-collapse: collapse;
+    }
+    input{
+        text-align: center;
+    }
+
+    th,
+    td {
+        padding: 8px;
+        border: 1px solid black;
+        text-align: center;
+    }
+
+    tr.hLight {
+        background: lightblue;
+    }
+</style>
+
+<body>
+    <table id="user-table">
+        <thead></thead>
+        <tbody></tbody>
+    </table>
+    <br>
+    <table id="price-table">
+        <thead></thead>
+        <tbody></tbody>
+    </table>
+</body>
+
+</html>
+<script src="data.js"></script>
+<script>
+    let listTitle = {
+        score: '分数',
+        name: '姓名',
+        gender: '性别',
+        balance: '鱼儿',
+
+    }
+
+    let user = [
+        {
+            name: '奋斗',
+            age: 18,
+            gender: '男',
+            score: 80,
+            balance: 100,
+        },
+        {
+            name: '坦然',
+            age: 18,
+            gender: '男',
+            score: 80,
+        },
+        {
+            name: '纷纷',
+            age: 18,
+            gender: '女',
+            score: 80,
+        },
+    ];
+
+    let product = {
+        pid: '编号',
+        name: '品名',
+        price: '价格',
+        balance: '库存',
+    }
+
+    let pPrice = [
+        {
+            name: '包子',
+            age: 18,
+            pid: '01',
+            price: 80,
+            balance: 100,
+        },
+        {
+            name: '青菜',
+            age: 18,
+            pid: '02',
+            price: 80,
+        },
+        {
+            name: '猪肉',
+            age: 18,
+            pid: '03',
+            price: 80,
+        },
+    ];
+
+    riceTable.boot('#user-table', listTitle, user);
+    riceTable.boot(
+        '#price-table',
+        product,
+        pPrice,
+        {
+            delete: {
+                name: '删除',
+                Delete: function (tr, i) {
+                    console.log(i);
+
+                    pPrice[i] = null;
+                    tr.remove();
+                },
+            },
+            b: {
+                name: '修改',
+                Delete: function () {
+                    console.log('ddd');
+
+                },
+            },
+            reset: {
+                name: '重置',
+                Reset: function (tr, i) {
+                    let children = tr.children;
+                    let len = children.length;
+                    let prices = pPrice[i];
+                    let startIndex = 0;
+                    let val;
+
+                    for (let key in product) {
+                        let td = tr.children[startIndex];
+                        val = prices[key];
+                        td.innerHTML = `<input value="${val|| '空气'}">`;
+
+                        let input = td.querySelector('input');
+                        input.addEventListener('keyup',e=>{
+                            console.log(e);
+                            
+                            if(e.key != 'Enter') {
+                                return;  
+                              }
+                            
+                            let newVal = input.value;    
+
+                            td.querySelector('input').remove();
+
+                            prices[key] = td.innerHTML = newVal;
+                            console.log('price:',prices);
+                        })
+                        startIndex++;
+                    }
+                    // for(let i = 0 ; i < len ; i++){
+                    //     if(i == len -1) {
+                    //          break;
+                    //       }
+                    //     td.innerHTML = `<td><input></td>`;
+
+                    // }
+
+                },
+            },
+            highLight: {
+                name: '高亮',
+                HighLight: function (tr, i) {
+                    tr.classList.toggle('hLight');
+                },
+            },
+            up: {
+                name: '向上',
+                Up: function (tr, i) {
+                    let up = i - 1;
+
+                    if (up < 0) {
+                        return;
+                    }
+
+                    let tmp = pPrice[0];
+                    pPrice[up] = pPrice[i];
+                    pPrice[i] = tmp;
+
+                    let brother = tr.previousElementSibling;
+                    if (brother) {
+                        brother.insertAdjacentElement('beforebegin', tr);
+                    }
+                },
+            },
+            down: {
+                name: '向下',
+                Down: function (tr, i) {
+                    dodo(tr, i);
+                },
+            },
+            discounted: {
+                name: '8折',
+                Discounted: function (tr, i) {
+                    let zk = pPrice[i]
+                    console.dir(tr);
+                    tr.cells[2].innerText = zk.price * .8;
+
+                }
+            },
+        }
+    );
+
+
+    function dodo(tr, i) {
+        let down = i + 1;
+        if (down > pPrice.length) {
+            return;
+        }
+        let tmp = pPrice[down];
+        pPrice[down] = pPrice[i]
+        pPrice[i] = tmp;
+
+        let brother = tr.nextElementSibling;
+        if (brother) {
+            brother.insertAdjacentElement("afterend", tr);
+        }
+
+    }
+</script>

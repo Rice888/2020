@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    :root {
+        font-family: sans-serif;
+    }
+
+    table {
+        border-collapse: collapse;
+        min-width: 500px;
+    }
+
+    th,
+    td {
+        text-align: center;
+        font-size: 20px;
+        padding: 8px;
+        border: 1px solid;
+
+    }
+</style>
+
+<body>
+    <h1>前泥洼表单</h1>
+    <div class="total">
+        <button data-max="101" data-min="0">全部</button>
+        <button data-max="101" data-min="90">学霸</button>
+        <button data-max="59" data-min="0">学渣</button>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>名字</th>
+                <th>性别</th>
+                <th>成绩</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody class="userTbody">
+        </tbody>
+    </table>
+</body>
+
+</html>
+<script src="main2.js"></script>
