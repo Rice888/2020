@@ -1,0 +1,38 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-02-10 13:00:44
+ * @LastEditTime : 2020-02-11 14:20:10
+ * @LastEditors  : Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /RiceProgram/2020/Javascript/10-js-check/3.html
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="3.css">
+</head>
+
+<body>
+    <div class="container">
+        <form novalidate>
+            <h1>表单</h1>
+            <input data-rule="numeric|min:1|max:12" type="text" name="month" placeholder="月份">
+            <input data-rule="numeric|min:1|max:7" type="text" name="week" placeholder="星期">
+            <input data-rule="numeric|positive|min:1" type="text" name="age" placeholder="年龄">
+            <input data-rule="in:male,female" type="text" name="gender" placeholder="性别">
+            <input data-rule="regex:^[a-zA-Z]{2,5}$" type="text" name="username" placeholder="名字">
+            <input type="text" name="email" placeholder="邮箱">
+            <input data-rule="numeric" type="text" name="balance" placeholder="余额">
+            <input data-rule="minLen:11|maxLen:13|sWith:1" type="text" name="phone" placeholder="手机">
+            <button type="submit">提交</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
+<script src="3.js"></script>

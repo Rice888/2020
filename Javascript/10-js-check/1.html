@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    :root {
+        font-size: 16px;
+    }
+
+    .container {
+        margin: 0 auto;
+        max-width: 30em;
+    }
+
+    h1 {
+        font-size: 2.4em;
+        padding: .001em .3em;
+        text-align: center;
+        color: #356caa;
+    }
+
+    button,
+    input {
+        margin-bottom: 0.6em;
+        font-size: inherit;
+        padding: 1.2em;
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #ddd {
+        background: pink;
+        padding: .5em;
+        /* margin: .2em; */
+        color: #356caa;
+    }
+
+    input.atIt {
+        border: 2px solid pink;
+    }
+</style>
+
+<body>
+    <div class="container">
+
+        <form novalidate>
+            <h1>用户注册</h1>
+            <input type="text" name="username" placeholder="姓名" value="Addd">
+            <input type="text" name="phone" placeholder="手机" value="15120080020">
+            <input type="email" name="email" placeholder="邮箱" value="@">
+            <input type="password" name="password" placeholder='密码' value="11111">
+            <div id="ddd" hidden></div>
+            <button type="submit">提交</button>
+        </form>
+
+    </div>
+
+
+
+</body>
+
+</html>
+<script src="1.js"></script>
+<script>
+    let form = document.querySelector('form');
+
+    let data = {};
+    let error = {
+        username: [],
+        phone: [],
+        email: [],
+        password: [],
+    };
+    boot();
+
+    function boot() {
+        bindEvents();
+    }
+
+    function bindEvents() {
+        bindSubmit();
+        bindKeyup();
+
+    }
+
+
+
+    function bindSubmit() {
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            data.username = form.querySelector('[name=username]').value;
+            data.phone = form.querySelector('[name=phone]').value;
+            data.email = form.querySelector('[name=email]').value;
+            data.password = form.querySelector('[name=password]').value;
+
+            validate(data);
+        });
+    }
+
+
+    function bindKeyup() {
+        let keyUp = form.querySelectorAll('.atIt')
+        keyUp.forEach(it => {
+            it.classList.remove('atIt');
+        })
+    }
+
+    function validate(data) {
+        error = {
+            username: [],
+            phone: [],
+            email: [],
+            password: [],
+        };
+
+        let vail = true;
+
+
+        if (!riceCheck.isUsername(data.username)) {
+            vail = false;
+            error.username.push('用户名有误，用户名介于4至12位之间');
+        }
+        if (!riceCheck.isPhone(data.phone)) {
+            vail = false;
+            error.phone.push('号码有误，手机：13112341234');
+        }
+        if (!riceCheck.isEmail(data.email)) {
+            vail = false;
+            error.email.push('邮箱有误，格式：rice@email.com');
+        }
+        if (!riceCheck.isPassword(data.password)) {
+            vail = false;
+            error.password.push('密码有误,密码介于6至30位之间');
+        }
+
+        if (!vail) {
+            showVail();
+
+        } else {
+            form.querySelectorAll('.atIt').forEach(it => {
+                it.classList.remove('atIt');
+            });
+        }
+
+    }
+
+    function showVail() {
+        let showError = form.querySelector('#ddd');
+        showError.hidden = false;
+        showError.innerHTML = '';
+        for (let key in error) {
+            let it = error[key];
+            if (it.length != 0) {
+                if (it.length) {
+                    form.querySelector(`[name=${key}]`).classList.add('atIt');
+                }
+            }
+            let show = document.createElement('span');
+            show.innerHTML = `<span> ${error[key]}</span >`;
+            showError.appendChild(show);
+
+        }
+    }
+
+
+</script>

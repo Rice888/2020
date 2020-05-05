@@ -17,7 +17,8 @@
         /* min-width: 380px; */
         border-collapse: collapse;
     }
-    input{
+
+    input {
         text-align: center;
     }
 
@@ -137,26 +138,30 @@
                     let prices = pPrice[i];
                     let startIndex = 0;
                     let val;
+                    console.log(children);
+                    
+
 
                     for (let key in product) {
-                        let td = tr.children[startIndex];
-                        val = prices[key];
-                        td.innerHTML = `<input value="${val|| '空气'}">`;
+                        let td = children[startIndex];
 
+                        val = prices[key];
+                        td.innerHTML = `<input value="${val || '空气'}">`;
+                        console.log(startIndex);
                         let input = td.querySelector('input');
-                        input.addEventListener('keyup',e=>{
-                            console.log(e);
-                            
-                            if(e.key != 'Enter') {
-                                return;  
-                              }
-                            
-                            let newVal = input.value;    
+                        input.addEventListener('keyup', e => {
+
+
+                            if (e.key != 'Enter') {
+                                return;
+                            }
+
+                            let newVal = input.value;
 
                             td.querySelector('input').remove();
 
                             prices[key] = td.innerHTML = newVal;
-                            console.log('price:',prices);
+
                         })
                         startIndex++;
                     }

@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2020-02-04 20:19:42
+ * @LastEditTime : 2020-02-15 22:05:02
+ * @LastEditors  : Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /RiceProgram/2020/Javascript/09-js-create/data.js
+ */
 ; (function () {
     'use strict';
     //    表      表头   表身     对象   数组
@@ -55,6 +63,8 @@
 
             if (operation) {
                 for (let idKey in operation) {
+
+                    
                     tr.querySelector('.' + idKey)
                         .addEventListener('click', () => {
                             for (let doit in operation[idKey]) {
