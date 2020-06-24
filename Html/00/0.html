@@ -1,12 +1,134 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-01-05 12:49:39
+ * @LastEditTime: 2020-05-04 20:42:05
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /RiceProgram/2020/Html/00/0.html
+ -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+<style>
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .nav {
+        display: block;
+    }
+
+    .deputy-nav div {
+        display: inline-block;
+    }
+
+    .right {
+        text-align: right;
+    }
+
+    .left {
+        text-align: left;
+
+    }
+
+    .item-line {
+        display: inline-block;
+    }
+
+    .board {
+        border: 1px solid;
+        padding: 2px;
+    }
+
+    .main-left {
+        float: left;
+        width: 80%;
+        box-sizing: border-box;
+    }
+
+    .main-right {
+        /* margin-left: 20%; */
+        /* float: left; */
+        box-sizing: border-box;
+    }
+    .item-line {
+        float:left;
+        width: 25%;
+    }
+</style>
+
 <body>
-    
+    <!--主标题-->
+    <header>
+        <nav class="main-nav board">
+            <a href="#">A1</a>
+            <a href="#">A2</a>
+            <a href="#">A3</a>
+        </nav>
+        <!--副标题-->
+        <nav class="deputy-nav board">
+            <!--副主导航-->
+            <div class="right">
+                <a href="">B1</a>
+                <a href="">B2</a>
+                <a href="">B3</a>
+            </div>
+            <!--搜索栏-->
+            <div class="left">
+                <form action="#">
+                    <input type="search" name="1" id="1">
+                </form>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container board">
+            <!--主内容区-->
+            <div class="mainline">讨论精选</div>
+            <div class="content">
+                <!--左边内容区-->
+                <div class="main-left board">
+                    <div class="item board">
+                        <div class="item-line board">喜欢</div>
+                        <div class="left">
+                            <div>标题</div>
+                            <div class="disc">内容</div>
+                        </div>
+                    </div>
+                </div>
+                <!--右边内容区-->
+                <div class="main-right board">
+                    <div class="bt">加入</div>
+                    <div class="item board">
+                        <div>喜欢</div>
+                        <div class="left">
+                            <div>标题</div>
+                            <div class="disc">内容</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- <footer class="board">
+        <div>© 2005－2018 douban.com, all rights reserved 北京豆网科技有限公司</div>
+        <div>
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+        </div>
+    </footer> -->
+
+
 </body>
+
 </html>
