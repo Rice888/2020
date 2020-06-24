@@ -20,7 +20,7 @@
 
   }
 
-  function repositionPopup(xOffset = 0, yOffset = 0) {
+function repositionPopup(xOffset = 0, yOffset = 0) {
     let width = popup.offsetWidth;
     let height = popup.offsetHeight;
     popup.style.left = window.innerWidth / 2 - width / 2 + xOffset + "px";
@@ -96,7 +96,7 @@
 
 
   function listenOpen() {
-    trigger.addEventListener('click', (el) => {
+    trigger.addEventListener('click', () => {
       setHide(true);
       repositionPopup();
     });
