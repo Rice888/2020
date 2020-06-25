@@ -1,0 +1,11 @@
+div {
+    background: rgb(75, 124, 180);
+    color     : #fff;
+}
+
+header,
+main,
+footer {
+    background: rgb(104, 214, 199);
+    
+}
