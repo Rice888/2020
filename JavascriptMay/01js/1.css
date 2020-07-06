@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  background: #646363;
+}
+
+#test {
+  color: #ffffff;
+  font-size: 5rem;
+  padding: 2rem;
+  display: inline-block;
+  background-color: #38c58a;
+  border: 5px solid white;
+}
+
+#count {
+  font-size: 10px;
+  color: #2f56c2;
+}
+
+[hidden] {
+  display: none !important;
+}
+/*# sourceMappingURL=1.css.map */
