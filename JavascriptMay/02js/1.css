@@ -1,0 +1,24 @@
+img {
+  max-width: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.slider {
+  position: relative;
+}
+
+.slider .item {
+  position: absolute;
+  display: block;
+  transition: all .7s;
+  opacity: 1;
+  -webkit-transition: all .7s;
+  -moz-transition: all .7s;
+  -ms-transition: all .7s;
+  -o-transition: all .7s;
+}
+/*# sourceMappingURL=1.css.map */
