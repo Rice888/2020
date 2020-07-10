@@ -1,0 +1,24 @@
+img {
+    max-width: 100%;
+    
+}
+.container {
+    // position: relative;
+    width: 600px;
+    margin: 0 auto;
+    .slider{
+        position: relative;
+        overflow: hidden;
+        height: 400px;
+        .item{
+            position: absolute;
+            display: block;
+            width: 100%;
+            transition: all 1s;
+            -webkit-transition: all 1s;
+            -moz-transition: all 1s;
+            -ms-transition: all 1s;
+            -o-transition: all 1s;
+} 
+    }
+}
