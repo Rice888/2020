@@ -1,0 +1,26 @@
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.container .slider {
+  position: relative;
+  height: 400px;
+}
+
+.container .slider .item {
+  position: absolute;
+  display: block;
+  transition: all 2s;
+  -webkit-transition: all 2s;
+  -moz-transition: all 2s;
+  -ms-transition: all 2s;
+  -o-transition: all 2s;
+}
+/*# sourceMappingURL=1.css.map */
