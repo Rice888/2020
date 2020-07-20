@@ -1,0 +1,21 @@
+body{
+    background-color: rgba(0,0,0,.7),;
+}
+#dropDown{
+    background-color: #234e80;
+    // position: absolute;
+    [hidden]{
+        display: none !important;
+    }
+    
+    a{
+        display: block;
+        text-decoration: none;
+        color: #fff;
+        padding: 10px 20px;
+    }
+
+    a:hover{
+        background-color: rgba(0,0,0,.5),;
+    }
+}

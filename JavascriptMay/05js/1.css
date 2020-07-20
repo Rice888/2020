@@ -1,0 +1,23 @@
+body {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#dropDown {
+  background-color: #234e80;
+}
+
+#dropDown [hidden] {
+  display: none !important;
+}
+
+#dropDown a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+#dropDown a:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/*# sourceMappingURL=1.css.map */
