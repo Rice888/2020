@@ -1,0 +1,23 @@
+body{
+    background-color: rgba(0,0,0,.8);
+}
+
+.popOut{
+    padding: 10px;
+    display: block;
+    position: fixed;
+    box-shadow: 1px 1px 3px rgba(194, 191, 191, 08);
+    color: #ffffff;
+    background: rgb(130, 130, 133);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    
+    
+}
+
+[hidden]{
+    display: none !important;
+}
