@@ -1,0 +1,17 @@
+body{
+    background-color: rgba(0,0,0,.7);
+}
+
+#dropdown{
+    border: 2px solid rgba(46, 157, 221, 0.5);
+    display: inline-block;
+    .item{
+        display: block;
+        text-decoration: none;
+        color: #fff;
+        padding: 5px;
+    }
+    .item:hover{
+        background-color: rgba(0,0,0,.7);
+    }
+}
