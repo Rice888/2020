@@ -1,0 +1,25 @@
+$myc:rgb(196, 196, 196);
+
+body {
+    background-color: rgba(0, 0, 0, .8);
+}
+
+#toolbar{
+    padding: 5px;
+}
+table {
+    color     : $myc;
+    text-align: center;
+    border-collapse: collapse;
+    width: 80%;
+    thead,
+    tbody,
+    th,
+    tr,
+    td{
+        
+        border: 2px solid $myc;
+        padding: 5px;
+        font-size: 1em;
+    }
+}
