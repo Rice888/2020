@@ -1,0 +1,17 @@
+body{
+    background-color: rgba(0,0,0,.6);
+}
+
+input{
+    width: 100%;
+    // display: block;
+    padding: 5px;
+    margin: 5px 0;
+
+}
+
+
+input[type=radio],
+input[type=checkbox]{
+    width: auto;
+}

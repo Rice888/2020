@@ -1,0 +1,117 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-07-26 15:26:09
+ * @LastEditTime: 2020-07-27 12:28:42
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /JavascriptMay/06js/07/1.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="1.css">
+</head>
+
+<body>
+    <form action="#" id="form">
+        <input type="text" name="name" placeholder="name">
+        <input type="number" name="age" placeholder="age">
+        <input type="email" name="email" placeholder="email@">
+        <input type="number" name="phone" placeholder="13333333333">
+        <input type="date" name="birthday" value="1987-02-15">
+        <div>性别
+            <label>男
+                <input type="radio" name="gender" value="male" >
+            </label>
+            <label>女
+                <input type="radio" name="gender" value="female">
+            </label>
+        </div>
+        <div>取向
+            <label>男
+                <input type="checkbox" name="orientation" value="male" >
+            </label>
+            <label>女
+                <input type="checkbox" name="orientation" value="female">
+            </label>
+            <label>车
+                <input type="checkbox" name="orientation" value="car" >
+            </label>
+        </div>
+
+        <button type="submit">提交</button>
+    </form>
+    
+    <div id="a">
+        <input type="text" name="name">
+        <input type="number" name="score">
+    </div>
+    
+    <!-- <form action="#" id="form2">
+        <input type="text" name="name" placeholder="name">
+        <input type="number" name="age" placeholder="age">
+        <input type="email" name="email" placeholder="email@">
+        <input type="number" name="phone" placeholder="13333333333">
+        <input type="date" name="birthday" value="1987-02-15">
+        <div>性别
+            <label>男
+                <input type="radio" name="gender" value="male" checked>
+            </label>
+            <label>女
+                <input type="radio" name="gender" value="female">
+            </label>
+        </div>
+        <div>取向
+            <label>男
+                <input type="checkbox" name="orientation" value="male" checked>
+            </label>
+            <label>女
+                <input type="checkbox" name="orientation" value="female">
+            </label>
+            <label>车
+                <input type="checkbox" name="orientation" value="car" checked>
+            </label>
+        </div>
+
+        <button type="submit">提交</button>
+    </form> -->
+
+
+    <script src="1.js"></script>
+    <script>
+        let person = {
+            score: 99,
+            birthday: '1987-01-03',
+            email: 'rice88@qq.com',
+            gender: 'female',
+            age: 18,
+            phone: 13888888888,
+            orientation:['male','car'],
+            name: '瓦罐',
+            a: 1,
+            b:3,
+        }
+
+        let person2 = {
+            birthday: '1987-01-03',
+            email: 'rice88@qq.com',
+            age: 18,
+            phone: 13888888888,
+            name: '张飞',
+            a: 1,
+        }
+
+        let goal = ['#a', '#form','#form2'];
+
+
+        rice.setData(person,goal)
+        //rice.setData(person2,['#form2',] );
+
+    </script>
+</body>
+
+</html>
