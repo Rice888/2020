@@ -1,0 +1,81 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-07-27 15:20:05
+ * @LastEditTime: 2020-07-28 13:24:41
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /JavascriptMay/06js/08/1.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="1.css">
+</head>
+
+<body>
+    <form id="form">
+        <input type="text" name="name" placeholder="name">
+        <input type="number" name="age" placeholder="age">
+        <input type="email" name="email" placeholder="xx@email.com">
+        <input type="date" name="birthday">
+        <input type="number" name="phone" placeholder="13888888888">
+        <div>性别
+            <label>男
+                <input type="radio" name="gender" value='male' >
+            </label>
+            <label>女
+                <input type="radio" name="gender" value='female'>
+            </label>
+        </div>
+        <div> like
+            <label>male
+                <input type="checkbox" name="orientation" value='male'>
+            </label>
+            <label>female
+                <input type="checkbox" name="orientation" value='female'>
+            </label>
+            <label>car
+                <input type="checkbox" name="orientation" value='car'>
+            </label>
+        </div>
+        <button type="submit">提交</button>
+    </form>
+
+    <div id="a">
+        <input type="number" name="card">
+    </div>
+    <div id="c">
+        <input type="number" name="cards" >
+    </div>
+    <div id="d">
+        <input type="text" name="cardStore">
+    </div>
+
+    <script src="1.js"></script>
+    <script>
+        let form = ['#form', '#a', '#c', '#d']
+        let data = {
+            name: 'rice',
+            age: 30,
+            gender: 'male',
+            orientation: ['car', 'female'],
+            email: 'rice@email.com',
+            birthday: '1987-02-15',
+            phone: 15120080020,
+            card: 3504052,
+            cards: 1177,
+            cardStore: 'rice',
+            a: 1,
+        }
+
+
+        rice.setData(data, form);
+        rice.getData(form);
+    </script>
+</body>
+
+</html>
