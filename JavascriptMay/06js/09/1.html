@@ -1,0 +1,80 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-07-28 13:42:36
+ * @LastEditTime: 2020-07-29 12:31:25
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /JavascriptMay/06js/09/1.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="1.css">
+</head>
+
+<body>
+    <table id="user-table"></table>
+    <table id="user-bank"></table>
+
+    <script src="1.js"></script>
+    <script>
+        let setForm = ['#user-table', '#user-bank']
+        let thead =
+            [
+                {   
+                    bm: 'user-table',
+                    name: '姓名',
+                    gender: '性别',
+                    age: '年龄',
+                },
+                {   
+                    bm: 'user-bank',
+                    title: '品名',
+                    stock: '库存',
+                    price: '价格',
+                    location: '产地',
+                    level: '等级',
+                },
+            ]
+
+        let data = [
+            {
+                name: '小红',
+                gender: '女',
+                age: 18,
+                title: '面膜',
+                stock: 1100,
+                price: 188,
+                location:'北京'
+            },
+            {
+                name: '小米',
+                gender: '男',
+                age: 18,
+                title: '苹果',
+                stock: 1100,
+                price: 18,
+                location:'北京'
+            },
+            {
+                name: '王刚',
+                gender: '男',
+                age: 18,
+                title: '泡面',
+                stock: 110,
+                price: 8,
+                location:'北京'
+            },
+        ]
+
+
+
+        rice.boot(setForm, thead, data);
+    </script>
+</body>
+
+</html>
