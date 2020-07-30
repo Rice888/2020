@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-07-28 13:42:36
- * @LastEditTime: 2020-07-29 12:49:37
+ * @LastEditTime: 2020-07-29 14:39:24
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /JavascriptMay/06js/09/1.js
@@ -68,4 +68,4 @@
 
         });
     }
-})();·
+})();
