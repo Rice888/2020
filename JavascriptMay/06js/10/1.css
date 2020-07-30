@@ -1,0 +1,14 @@
+body {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+table {
+  border-collapse: collapse;
+  margin: 5px 0;
+}
+
+table thead th, table thead td, table tbody th, table tbody td {
+  border: 1px solid #fff;
+  padding: 5px;
+}
+/*# sourceMappingURL=1.css.map */

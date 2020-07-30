@@ -1,0 +1,14 @@
+body{
+    background-color: rgba(0,0,0,.5);
+}
+
+table {
+    border-collapse: collapse;
+    margin: 5px 0;
+    thead,tbody{
+        th,td{
+            border: 1px solid #fff;
+            padding: 5px;
+        }
+    }
+}
